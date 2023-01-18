@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+
+        function switchOff() {
+            document.getElementById("bulbimage").src =
+                "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+            document.getElementById("Catimage").src =
+                "https://paulkinchla.com/wp-content/uploads/2020/10/ghost-2000x0-c-default.webp";
+            document.getElementById("switchstatus").textContent = "Switched Off";
+            document.getElementById("onswitch").style.backgroundColor = "#cbd2d9";
+            document.getElementById("offswitch").style.backgroundColor = "#e12d39";
+        }
+
+
+
+        function switchOn() {
+            document.getElementById("bulbimage").src =
+                "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+            document.getElementById("Catimage").src =
+                "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
+            document.getElementById("switchstatus").textContent = "Switched On";
+            document.getElementById("onswitch").style.backgroundColor = "#22c55e";
+            document.getElementById("offswitch").style.backgroundColor = "#cbd2d9";
+        }
+
+
+    </script>
+
+
+    <style>
+        
+        
+        @keyframes boot {
+            0%   {background: red; left: 0px; top: 0px;}
+  25%  {background: yellow; left: 200px; top: 0px;}
+  50%  {background: blue; left: 200px; top: 200px;}
+  75%  {background: green; left: 0px; top: 200px;}
+  100% {background: red; left: 0px; top: 0px;}
+        }
+    
+        .dark-background {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+        }
+
+        .bulb-image {
+            width: 150px;
+        }
+
+        .cat-image {
+            position: relative;
+            animation: boot 5s 2;
+            height: 300px;
+            width: 300px;
+        }
+
+        .switch-board {
+            width: 294px;
+            height: 139px;
+            background-color: #7b8794;
+            border-radius: 12px;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin: 16px;
+        }
+
+        .switch-status {
+            font-family: "Roboto";
+            font-weight: 500;
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 24px;
+        }
+
+        .on-switch {
+            font-family: "Roboto";
+            font-weight: bold;
+            font-size: 24px;
+            color: #ffffff;
+            border-radius: 8px;
+            width: 99px;
+            height: 44px;
+            margin-left: 16px;
+            background-color: #cbd2d9;
+        }
+
+        .off-switch {
+            font-family: "Roboto";
+            font-weight: bold;
+            font-size: 24px;
+            color: #ffffff;
+            border-radius: 8px;
+            width: 99px;
+            height: 44px;
+            background-color: #e12d39;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="dark-background text-center">
+        <div>
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" class="bulb-image"
+                id="bulbimage" />
+        </div>
+        <div>
+            <img src="https://paulkinchla.com/wp-content/uploads/2020/10/ghost-2000x0-c-default.webp" class="cat-image"
+                id="Catimage" />
+        </div>
+        <div class="switch-board">
+            <h1 class="switch-status" id="switchstatus">Switched Off</h1>
+            <button class="off-switch" onclick="switchOff()" id="offswitch">OFF</button>
+            <button class="on-switch" onclick="switchOn()" id="onswitch">ON</button>
+        </div>
+    </div>
+
+</body>
+</html>

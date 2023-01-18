@@ -1,0 +1,29 @@
+<!Document html>
+
+<html>
+
+    <head>
+        <title>Validation Form</title>
+    </head>
+    <body>
+        <form id="Validationform">
+            <input type="text" id="Username" placeholder="Username" required>
+                </br>
+            <input type="email" id="Email" placeholder="Email" required>
+                </br>
+            <input type="submit" value="Register">
+            </input>
+        </form>
+    </body>
+
+    <script>
+        var form= document.getElementById('Validationform')
+        form.addEventListener('submit',function(event){
+            event.preventDefault()
+
+            var Username=document.getElementById('Username').value
+            console.log(Username)
+            var Email=document.getElementById('Email').value
+            console.log(Email)
+        })
+    </script>
